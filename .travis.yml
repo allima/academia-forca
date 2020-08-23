@@ -1,0 +1,9 @@
+addons:
+  sonarcloud:
+    organization: "allima"
+    token:
+      secure: "hBtY971EL3ZeFFE+EdEbD1ADngbhy74EMEbDFblV4aEYxHkLaFR3J/C0dyur21qeuPaIvMHVJPGiO7wxpLn+FCm3f899tSV4L/v9jcTb40UkY8LmOcOiDZOfepX4NVIWF5m2L/7ovJdxKHPydd4u2WuWFrTrreXjR57dE79NXtkrab4azgEAnx5Eh8zhRxLaJTAOOvyYxEyGUaaBXtFZNcL9jX98kyWBs/szEH2e+Z3T4Nz03F4zyN3YUW4Gp9SMXcX0REqtHb0oIzPa+xbkfzqKiioEAmUkV3y4zsfufO3LDEchxhFqwyHQIhmuzLJs9NCUQq0liMbzlS1gUWfddyiYDY/XK3A28ed1EleyuVQ4Ig9hqvfJHeEQUtHSyusxy/knBZ9hkNFjzqHeX12YcXkc+vkcsJ7pLQUGNrqy5A8obE3Ti7v7/2vBuxpP503T474iun9zd4NH2r0DWFDIeGK5vTYV3n0CrnKTy/n9XHYUw27Iu9TkgOixqLEdSoiSQHjlb7piAuR7hk7IeWSBXUxFff0k4gsVYV+ALB95y+ONHucMb2aYa7zAZz0ACVX5OFMuoAL28ExPo/jdb2nKHwN+rsmtJd+/YSg3PSuz1VHtoYzTH5SM1XEjyUlPIYqL80IFyVCT69+3Tt7h2VIseC+Sq43zRfbsZ2COM8tzSpg="
+
+
+script:
+  - ./gradlew sonarqube

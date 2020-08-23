@@ -8,6 +8,7 @@ class AcademiaForcaApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }

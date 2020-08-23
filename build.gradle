@@ -28,5 +28,6 @@ test {
 sonarqube {
 	properties {
 		property "sonar.projectKey", "allima_academia-forca"
+		property "sonar.sourceEncoding", "UTF-8"
 	}
 }

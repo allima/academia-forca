@@ -6,7 +6,6 @@ addons:
     organization: "allima"
     token:
       secure: "QfEB1XVClh5QKGK5IJJZwzCW0V+iTtLYMb6ZWyNhjfNWjf2Hq8iSXtAipzVttwb/VXRUXwewh14zgwqWg1sKc4EH66TnwYF/x4TUuDdgtTRjb71JZ48D94XKWnvnXTnBQpDn71xZJ8FUrLeVE6HTslPtqUxjxOGO8CcOd2syMrnw/e2WKIme5ygZTpiOtpiDYO4w5UJLKt8lRLWot1GDMfenJUO1MjLaf0br2BBFinKXz/rtrY8RDdCxN5sxj4K1BCX+xKm6EAhhKmfqiTtJ7tPRhdFhvpZmtV+eUqUaklxZjaR2a4TEfmFN0psWV7LyBjbxjKDUaRUMfX9iJFh6EXZI8jpXIVvzhRhEfugedZbL+AIzrt9B2uKPN5pExS39IsmFyURHlOw9CJVWl/9DEUSuy9VxTHMfsZGF4S7ran/FH/KsOpbxZYyjg0Tuyi/7tnbDc+FHI8kbvcUbpAD3C/FbBHYrZcp/0XGfXkOjFSx8YHarVoHhobgoLG+YkRSzUUNu0s2T08vLhTSEdizCSm8aKI4tuqX1it7HQuK3KMQCsyYjEIMEXgl5PKdSolBF/4sB7+bXhR0mPSmYvvrkP+/aB2P07flyWqz/sPup7GjNg+3GrGyFiG0PwpsIr4Wg4ByQ5TeG9Gt3WGsOTwA2pz7GdhHpz2iOgZ3i4ODHZAE="
-
 script:
   - ./gradlew sonarqube
 
@@ -16,5 +15,4 @@ cache:
     - '$HOME/.sonar/cache'
     - '$HOME/.gradle'
     - '.gradle'
-
 

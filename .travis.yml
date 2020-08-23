@@ -1,3 +1,11 @@
+language: java
+install: skip
+
+os: linux
+dist: trusty
+jdk: openjdk11
+
+
 addons:
   sonarcloud:
     organization: "allima"

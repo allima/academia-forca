@@ -7,7 +7,7 @@ addons:
     token:
       secure: "D8qilr4BmkDthg8G9gVOTKTN8z4aituEdVpVrG10KtJrVuz6aUl8vlRioyJP7dtF1CdVBnPXCZ+Bk89dJsnnUdDZ+ampX93ZvGh+pJF5LwqQFsR8ZvYtuWHdb83ttjz1akxUhE+Jgutk7boWG0OtyDJhGS2wd8zq+oziMo44K91mw6pE04PJnPYziJ/t/u01YNeT9QmZS2QPCXKMLxFtp6DDYZJnHw4s3SObwiiny5rR3zsAyZIlidQPSNzbrEwtuTO5jy2BQ9OuN5hRK8Y9ZO4bCwMNvcW6uFufrsmHP7XyeLRF+JU8IFLWXQZEqx1dySFJVtZve1DnYxChMeUe7n1Q7EgBitywBfxonP5aJ6WSC9X/1mGIfdZ1IdzwT0Uc5yJgiKwah1Zb9iFZMYf0XUXkcizTKaiws/g4mjAxmjUAW0abkKTaZ7tWDX7+TyV43/kglH34wIvY8Q4noJmKW8ieCGm4QoEMKt/rfLYTn4G2UINgaePf8CDkytdkEFkugOL8yqeX2DJ3AAEiv+yynnOvwOe+9yoVmW9gHo2SaMkVrJepXdtQjfvhi7eFeoJ6HQDESCaEkLlehC/+lgltzcO7GF9K+NPv5o6G/c70LiOQeJvTZAqRzxl/nSZvoNSRNwtmS5Y6T/i7HfZ8zHsWBY3SeNm6hnS8pLL9Yb3hteY="
 script:
-  - ./gradlew build
+  - ./gradlew build jacocoTestReport
   - ./gradlew sonarqube
 
 cache:

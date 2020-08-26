@@ -34,6 +34,7 @@ sonarqube {
 		property "sonar.projectName", "Academia Força"
 		property "sonar.sourceEncoding", "UTF-8"
 		property "sonar.host.url", "https://sonarcloud.io"
+		property "sonar.sources", "src/main/java,src/main/resources"
 	}
 }
 

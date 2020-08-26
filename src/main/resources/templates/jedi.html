@@ -14,8 +14,8 @@
 <table>
      <caption>Jide table</caption>
     <tr>
-        <th>NAME</th>
-        <th>LASTNAME</th>
+        <th id="name">NAME</th>
+        <th id="last-name">LASTNAME</th>
     </tr>
     <tr th:each="jedi : ${allJedi}">
         <td th:text="${jedi.name}"> </td>

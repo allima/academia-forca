@@ -1,12 +1,25 @@
 package com.ropalon.academia.forca.model;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
+@Entity
+@Table(name = "jedi")
 public class Jedi {
 
-    @NotBlank
+    @Id
+    @Column(name="id_jedi")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Size(min = 3, max = 10, message = "Nome deve conter entre 3 e 10 caracteres")
+    @NotBlank(message = "Nome não pode estar em branco")
+    @Column(name = "name")
     private  String name;
-    @NotBlank
+
+    @NotBlank(message = "Sobrenome não pode estar em branco")
+    @Column(name = "last_name")
     private  String lastName;
 
     public Jedi(String name, String lastName) {
@@ -32,4 +45,12 @@ public class Jedi {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(final Long id) {
+        this.id = id;
+    }
+
 }

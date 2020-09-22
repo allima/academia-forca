@@ -23,7 +23,7 @@ public class JediController {
         final ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("jedi");
 
-        modelAndView.addObject("allJedi", jediRepository.getAllJedi());
+        modelAndView.addObject("allJedi", jediRepository.findAll());
         return modelAndView;
     }
 
@@ -40,7 +40,7 @@ public class JediController {
         if(result.hasErrors()) {
             return "new-jedi";
         }
-            jediRepository.add(jedi);
+            jediRepository.save(jedi);
 
         redirectAttributes.addFlashAttribute("message", "Jedi cadastro com sucesso");
         return "redirect:jedi";

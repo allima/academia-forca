@@ -3,10 +3,10 @@ package com.ropalon.academia.forca.rest;
 import com.ropalon.academia.forca.model.Jedi;
 import com.ropalon.academia.forca.repository.JediRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,17 +20,21 @@ public class JediResource {
     public List<Jedi> getAllJedi() {
 
         return repository.findAll();
-
     }
 
     @GetMapping("/api/jedi/{id}")
-    public Jedi getJedi(@PathVariable("id") Long id) {
-        Optional<Jedi> jediOp = repository.findById(id);
-
-        Jedi jedi = null;
+    public ResponseEntity<Jedi> getJedi(@PathVariable("id") Long id) {
+        final Optional<Jedi> jediOp = repository.findById(id);
+        ResponseEntity jedi;
         if (jediOp.isPresent()) {
-            jedi= jediOp.get();
+            jedi = ResponseEntity.ok(jediOp.get());
+        }else {
+            jedi = ResponseEntity.notFound().build();
         }
         return jedi;
+    }
+    @PostMapping("/api/jedi")
+    public Jedi createJedi(@Valid @RequestBody Jedi jedi){
+        return repository.save(jedi);
     }
 }

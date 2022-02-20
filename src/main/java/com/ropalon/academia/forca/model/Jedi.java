@@ -9,22 +9,22 @@ import javax.validation.constraints.Size;
 public class Jedi {
 
     @Id
-    @Column(name="id_jedi")
+    @Column(name = "id_jedi")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Size(min = 3, max = 10, message = "Nome deve conter entre 3 e 10 caracteres")
     @NotBlank(message = "Nome não pode estar em branco")
     @Column(name = "name")
-    private  String name;
+    private String name;
 
     @NotBlank(message = "Sobrenome não pode estar em branco")
     @Column(name = "last_name")
-    private  String lastName;
+    private String lastName;
 
     public Jedi(String name, String lastName) {
-        this.name =name;
-        this.lastName=lastName;
+        this.name = name;
+        this.lastName = lastName;
     }
 
     public Jedi() {
@@ -45,6 +45,7 @@ public class Jedi {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
     public Long getId() {
         return id;
     }

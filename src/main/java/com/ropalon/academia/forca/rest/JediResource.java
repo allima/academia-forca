@@ -2,11 +2,14 @@ package com.ropalon.academia.forca.rest;
 
 import com.ropalon.academia.forca.model.Jedi;
 import com.ropalon.academia.forca.repository.JediRepository;
+
+import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+
 import java.util.List;
 import java.util.Optional;
 
